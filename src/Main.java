@@ -396,12 +396,23 @@ public class Main {
 
                     if (guestsArr[i] == null) {
                         System.out.println("Name: ");
-                        
+
                         guestsArr[i] = scanner.next();
                         break;
                     }
                 }
 
+
+            }
+            else if (option == 3) {
+                System.out.println("Name: ");
+                String name = scanner.next();
+                for (int i =0; i < guestsArr.length; i++) {
+                    if (guestsArr[i] !=null && guestsArr[i].equals(name)) {
+                        guestsArr[i] = null;
+                        break;
+                    }
+                }
 
             }
             else if (option == 4 ) {
