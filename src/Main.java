@@ -380,7 +380,7 @@ public class Main {
             System.out.println("1 - Display All Guests");
             System.out.println("2 - Add Guest");
             System.out.println("3 - Remove Guest");
-            System.out.println("4- Exit");
+            System.out.println("4 - Exit");
             System.out.println("Option: ");
             int option = scanner.nextInt();
             System.out.println();
@@ -388,9 +388,22 @@ public class Main {
             if (option == 1) {
             for (int i = 0; i < guestsArr.length; i++) {
 
-                System.out.println(guestsArr[i]);
-            }
+                    System.out.println(guestsArr[i]);
+                }
         }
+            else if (option == 2) {
+                for (int i = 0; i < guestsArr.length; i++) {
+
+                    if (guestsArr[i] == null) {
+                        System.out.println("Name: ");
+                        
+                        guestsArr[i] = scanner.next();
+                        break;
+                    }
+                }
+
+
+            }
             else if (option == 4 ) {
                 break;
             }
